@@ -1,0 +1,28 @@
+<h1>Upload your photo</h1>
+
+<%= form_with url:create_folder_path, local: true do |form| %>
+
+<div class="field">
+<%= form.label :folder %>
+<%= form.text_field :folder  %>
+</div>
+<br>
+<br>
+<div class="field">
+<%= form.label :image %>
+<%= form.file_field :image %>
+</div>
+<br>
+<br>
+<div class="actions">
+<%= form.submit %>
+</div>
+
+
+<%end%>
+
+<% flash.each do |type, msg|%>
+ <div style="color:red;">
+ <%= msg%>
+ <div>
+<%end%>
