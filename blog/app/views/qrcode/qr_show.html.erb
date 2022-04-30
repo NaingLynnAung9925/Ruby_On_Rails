@@ -1,0 +1,10 @@
+<h1>Your QR code is </h1>
+
+<%= image_tag "#{@qr_image}" %>
+
+<%= form_with url:download_path do |form| %>
+  <%= form.button "Download" %>
+<% end %>
+
+
+<%= link_to "Back", tuto11_qrcode_path %>

@@ -1,0 +1,11 @@
+<h1>Change QR code</h1>
+
+<%= form_with url:create_qrcode_path do |form| %>
+  <div>
+  <%= form.text_field :input %>
+  </div>
+  <br>
+  <div>
+  <%= form.submit "Create" %>
+  </div>
+  <% end %>
