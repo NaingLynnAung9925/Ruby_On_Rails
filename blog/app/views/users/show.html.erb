@@ -4,11 +4,15 @@
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
+<p>
+<strong>Phone:</strong>
+<%= @user.phone %>
 
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<%= link_to 'Destroy', @user, :confirm => "Are you sure?", :method => :delete %>
 <%= link_to 'Back', signup_path %>

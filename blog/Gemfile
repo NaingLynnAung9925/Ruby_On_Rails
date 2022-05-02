@@ -10,6 +10,23 @@ gem 'mysql2', '~> 0.5'
 
 # For qrcode
 gem 'rqrcode'
+
+# For Roo
+gem 'roo'
+
+# Spread sheet
+gem 'spreadsheet'
+
+# For docx
+gem 'docx'
+
+# For Rubyxl
+gem 'rubyXL'
+
+# For creek
+
+gem 'creek'
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
