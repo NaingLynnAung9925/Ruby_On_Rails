@@ -8,4 +8,13 @@ class ApplicationController < ActionController::Base
 	end
   end
 
+	helper_method :current_auth
+  def current_auth
+	if session[:user_id]
+  	@current_auth ||= Auth.find(session[:user_id])
+	else
+	@current_auth = nil
+	end
+  end
+
 end

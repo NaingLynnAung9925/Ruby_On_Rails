@@ -1,13 +1,17 @@
 
 <% if current_user %>
 
- Logged in as <%= current_user.email %>.
- <%= link_to 'Log Out', logout_path %>
+Logged in as <%= current_user.email %>.
+<%= link_to 'Log Out', logout_path %>
 <% else %>
 <h1>Register Here</h1>
 
- <%= link_to 'Sign Up', signup_path %> or
- <%= link_to 'Log In', login_path %>
+<%= link_to 'Sign Up', signup_path %> or
+<%= link_to 'Log In', login_path %>
+<br>
+<br>
+<br>
+<%= link_to 'List of Users', users_path %>
 <% end %>
 <p id='notice'><%= notice %></p>
 

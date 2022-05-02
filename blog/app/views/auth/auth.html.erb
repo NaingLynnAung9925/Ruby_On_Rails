@@ -1,0 +1,16 @@
+<% if current_auth %>
+
+ Logged in as <%= current_auth.email %>.
+ <%= link_to 'Log Out', log_out_path %>
+
+<% else %>
+
+<h1>Register</h1>
+ <%= link_to 'Sign Up', sign_up_path %> or
+ <%= link_to 'Log In', log_in_path %>
+
+<% end %>
+<p id='notice'><%= notice %></p>
+
+
+

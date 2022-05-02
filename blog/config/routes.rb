@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
+
+  get 'sec_sessions/auth'
+  get 'sec_sessions/create'
+  get 'sec_sessions/destroy'
   root 'home#index'
+
+  # For tuto 08
+    get '/tuto08/auth', to: 'auth#auth'
+
+  resources :auths
+  resources :sec_sessions, only: [:auth, :create, :destroy]
+  get '/tuto08/sign_up', to: 'auths#new', as: 'sign_up'
+  get '/tuto08/log_in', to: 'sec_sessions#auth', as: 'log_in'
+  get '/tuto08/log_out', to: 'sec_sessions#destroy', as: 'log_out'
 
 
   # For tuto 09
@@ -31,4 +44,5 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'users', to: 'users#index'
 end
