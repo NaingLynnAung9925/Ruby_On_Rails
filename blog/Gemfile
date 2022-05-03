@@ -14,8 +14,8 @@ gem 'rqrcode'
 # For Roo
 gem 'roo'
 
-# Spread sheet
-gem 'spreadsheet'
+# For chartkick
+gem 'chartkick'
 
 # For docx
 gem 'docx'

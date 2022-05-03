@@ -1,5 +1,8 @@
 <h1>Your File Data is</h1>
 
-
+<% if (@arr.last == 'xlsx') %>
+  <%= data = Roo::Excelx.new(params[:file]) 
+  data.row(2) %>
+<% else %>
   <%= Import.import_file(params[:file]) %>
-
+<% end %>

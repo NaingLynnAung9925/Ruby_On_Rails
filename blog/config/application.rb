@@ -1,7 +1,6 @@
 require_relative "boot"
 
 require 'roo'
-require 'spreadsheet'
 require 'rqrcode'
 require 'docx'
 require 'csv'
