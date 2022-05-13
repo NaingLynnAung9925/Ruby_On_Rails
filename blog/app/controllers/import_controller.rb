@@ -12,10 +12,14 @@ class ImportController < ApplicationController
 
   def import_file
 
-    @file_name = params[:file].original_filename
-    @arr = @file_name.split(".")
+   if params[:file]
+      @file_name = params[:file].original_filename
+      @arr = @file_name.split(".")
       Import.import_file(params[:file] )
     render 'import_show'
+   else
+    render 'index'
+   end
   end
 
 end
