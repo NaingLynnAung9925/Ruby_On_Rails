@@ -10,7 +10,7 @@ class UploadController < ApplicationController
 
       @img_name = params[:image].original_filename
 
-      if(Dir.exists?("./app/views/upload/#{@folder_name}"))
+      if(Dir.exists?("./app/assets/images/#{@folder_name}"))
         redirect_to tuto09_upload_path, notice: "This Folder Name is Existing"
 
       else
@@ -18,9 +18,9 @@ class UploadController < ApplicationController
         session[:folder_name] = @folder_name
         session[:img_name] = @img_name
 
-        Dir.mkdir("./app/views/upload/#{@folder_name}")
+        Dir.mkdir("./app/assets/images/#{@folder_name}")
 
-        File.open("./app/views/upload/#{@folder_name}/#{@img_name}", "w") do |f|
+        File.open("./app/assets/images/#{@folder_name}/#{@img_name}", "w") do |f|
           f.write params[:image]
 
         end
